@@ -1,0 +1,59 @@
+###
+GET  http://127.0.0.1:8000/api/doctor/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/api/doctor/
+Content-Type: application/json
+
+{
+        "Name": "Dr. Vishnu Raj",
+        "Specialization": "General Medicine",
+        "Experience": 7,
+        "Hospital": "Green Valley Hospital",
+        "Qualification": "MBBS, MD General Medicine",
+        "Consultation_Fee": 300,
+        "Available": true
+    }
+
+### 
+GET http://127.0.0.1:8000/api/doctor/1/
+Accept: application/json
+
+
+###
+PUT http://127.0.0.1:8000/api/doctor/1/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "Name": "Dr. Rahul",
+    "Specialization": "Cardiology",
+    "Experience": 9,
+    "Hospital": "district Hospital",
+    "Qualification": "MBBS, MD Cardiology",
+    "Consultation_Fee": 500,
+    "Available": true
+}
+
+
+###
+DELETE http://127.0.0.1:8000/api/doctor/1/
+
+
+###
+GET http://127.0.0.1:8000/api/appointment/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/appointment/
+Content-Type: application/json
+
+{
+    "Patient_name": "Adhi",
+    "phone": "9876543212",
+    "doctor_id": 1,
+    "appointment_date": "2026-10-30",
+    "problem": "Fever and headache"
+}
